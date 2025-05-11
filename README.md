@@ -2,18 +2,12 @@
 
 Currently private, maybe will be public some day.
 
-## Vital dependencies
-
-These are the ones that should be installed BEFORE executing sync script.
-
-- `git`
-- `yay`
-
 ## Workspace // Programs affected
 
 These ones will be able to be installed if not presented.
 Configs in this repo are related to these programs and packages
 
+- yay
 - ZSH
 - Oh My Zsh
 - Github helper (`gh`) TODO: check if `gh` is authed
