@@ -8,11 +8,11 @@ These ones will be able to be installed if not presented.
 Configs in this repo are related to these programs and packages
 
 - yay
+- `nunzayin/util`
 - ZSH
-- fzf + fzf-tab-git
 - Oh My Zsh + own theme
+- fzf + fzf-tab-git
 - Github helper (`gh`) TODO: check if `gh` is authed
-- `nunzayin/utils`
 - Xorg + xinit + unclutter
 - i3 + i3lock-color + nm-applet + gxkb-ru-by-flags + volctl
 - maim
@@ -20,5 +20,4 @@ Configs in this repo are related to these programs and packages
 - dmenu
 - neovim
 - wezterm
-- yay
 
