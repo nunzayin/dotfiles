@@ -15,6 +15,7 @@ Configs in this repo are related to these programs and packages
 - Github helper (`gh`) TODO: check if `gh` is authed
 - Xorg + xinit + unclutter
 - i3 + i3lock-color + nm-applet + gxkb-ru-by-flags + volctl
+- brave
 - maim
 - xclip
 - dmenu
