@@ -8,16 +8,19 @@ These are the ones that should be installed BEFORE executing sync script.
 
 - `git`
 - Github helper (`gh`) TODO: check if `gh` is authed
+- `yay`
 
 ## Workspace // Programs affected
 
-- ZSH + Oh My Zsh
-- Xorg + xinit + unclutter
-- i3wm + i3lock-color + nm-applet
-- 
+These ones will be able to be installed if not presented.
+Configs in this repo are related to these programs and packages
 
-## Related installations
-
-These ones will be installed if not presented:
-
+- ZSH
+- Oh My Zsh
 - `nunzayin/utils`
+- Xorg + xinit + unclutter
+- i3wm + i3lock-color + nm-applet + gxkb-ru-by-flags + volctl
+- maim
+- xclip
+- dmenu
+
