@@ -10,7 +10,7 @@ Configs in this repo are related to these programs and packages
 - yay (+ trash-cli)
 - `nunzayin/util`
 - ZSH
-- Oh My Zsh + own theme
+- Oh My Zsh
 - fzf + fzf-tab-git
 - Github helper (`gh`) TODO: check if `gh` is authed
 - Xorg + xinit + unclutter
