@@ -9,3 +9,6 @@ all: install sync
 
 install:
 	./install.sh
+
+sync:
+	./sync.sh
