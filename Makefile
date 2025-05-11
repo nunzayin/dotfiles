@@ -10,7 +10,7 @@ help:
 all: install sync
 
 install:
-	if [[ -n command -v yay ]]; then
+	if [[ -n $$(command -v yay) ]]; then
 		sudo pacman -S --needed base-devel
 		git clone "https://aur.archlinux.org/yay.git"
 		cd yay
