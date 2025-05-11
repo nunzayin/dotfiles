@@ -9,7 +9,8 @@ Configs in this repo are related to these programs and packages
 
 - yay
 - ZSH
-- Oh My Zsh
+- fzf + fzf-tab-git
+- Oh My Zsh + own theme
 - Github helper (`gh`) TODO: check if `gh` is authed
 - `nunzayin/utils`
 - Xorg + xinit + unclutter
