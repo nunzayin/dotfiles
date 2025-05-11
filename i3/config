@@ -19,7 +19,6 @@ set $i3lockconf \
 
 font pango:monospace 8
 
-exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 exec --no-startup-id gxkb
 exec --no-startup-id volctl
