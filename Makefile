@@ -7,3 +7,12 @@ help:
 	@echo '	install - install the whole workspace'
 	@echo '	sync - synchronize configs'
 
+all: install sync
+
+install:
+	if [[ -n command -v yay ]]; then
+		sudo pacman -S --needed base-devel
+		git clone "https://aur.archlinux.org/yay.git"
+		cd yay
+		makepkg -si
+	fi
