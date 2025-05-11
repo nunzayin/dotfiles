@@ -13,6 +13,7 @@ These are the ones that should be installed BEFORE executing sync script.
 
 - ZSH + Oh My Zsh
 - Xorg + xinit + unclutter
+- i3wm + i3lock-color + nm-applet
 - 
 
 ## Related installations
