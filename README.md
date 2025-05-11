@@ -1,14 +1,22 @@
 # NZ's dotfiles
 
-Currently private, maybe will be public some day
+Currently private, maybe will be public some day.
 
 ## Vital dependencies
+
+These are the ones that should be installed BEFORE executing sync script.
 
 - `git`
 - Github helper (`gh`) TODO: check if `gh` is authed
 
 ## Workspace // Programs affected
 
-- ZSH + Oh-My-Zsh
+- ZSH + Oh My Zsh
 - Xorg + xinit + unclutter
 - 
+
+## Related installations
+
+These ones will be installed if not presented:
+
+- `nunzayin/utils`
