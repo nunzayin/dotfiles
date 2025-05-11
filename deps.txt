@@ -15,3 +15,4 @@ dmenu
 neovim
 wezterm
 brave-bin
+lazygit
