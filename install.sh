@@ -10,6 +10,10 @@ if ! [[ -n $(command -v yay) ]]; then
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si
+    if ! [[ -n $(command -v yay) ]]; then
+        echo "Could not satisfy vital dependency: yay"
+        exit 1
+    fi
     cd ..
     yay -Syu
     yay -S --needed trash-cli
@@ -21,3 +25,5 @@ if ! [[ -e ~/util ]]; then
     git clone https://github.com/nunzayin/util
 fi
 
+yay -S --needed zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
