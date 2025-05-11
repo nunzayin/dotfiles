@@ -7,7 +7,6 @@ Currently private, maybe will be public some day.
 These are the ones that should be installed BEFORE executing sync script.
 
 - `git`
-- Github helper (`gh`) TODO: check if `gh` is authed
 - `yay`
 
 ## Workspace // Programs affected
@@ -17,6 +16,7 @@ Configs in this repo are related to these programs and packages
 
 - ZSH
 - Oh My Zsh
+- Github helper (`gh`) TODO: check if `gh` is authed
 - `nunzayin/utils`
 - Xorg + xinit + unclutter
 - i3 + i3lock-color + nm-applet + gxkb-ru-by-flags + volctl
