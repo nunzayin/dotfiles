@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # TODO: perform checking if util is installed
-# Oh My Zsh also
+# TODO: the same for Oh My Zsh
