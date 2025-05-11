@@ -1,0 +1,11 @@
+[http]
+	postBuffer = 157286400
+[user]
+	name = nz
+	email = <64735893+nunzayin@users.noreply.github.com>
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
