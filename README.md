@@ -7,7 +7,7 @@ Currently private, maybe will be public some day.
 These ones will be able to be installed if not presented.
 Configs in this repo are related to these programs and packages
 
-- yay
+- yay (+ trash-cli)
 - `nunzayin/util`
 - ZSH
 - Oh My Zsh + own theme
