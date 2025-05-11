@@ -24,4 +24,5 @@ Configs in this repo are related to these programs and packages
 - xclip
 - dmenu
 - neovim
+- wezterm
 
