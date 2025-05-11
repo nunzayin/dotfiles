@@ -19,8 +19,9 @@ Configs in this repo are related to these programs and packages
 - Oh My Zsh
 - `nunzayin/utils`
 - Xorg + xinit + unclutter
-- i3wm + i3lock-color + nm-applet + gxkb-ru-by-flags + volctl
+- i3 + i3lock-color + nm-applet + gxkb-ru-by-flags + volctl
 - maim
 - xclip
 - dmenu
+- neovim
 
