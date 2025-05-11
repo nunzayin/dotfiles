@@ -25,4 +25,5 @@ Configs in this repo are related to these programs and packages
 - dmenu
 - neovim
 - wezterm
+- yay
 
