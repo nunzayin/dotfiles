@@ -8,3 +8,4 @@ help:
 all: install sync
 
 install:
+	./install.sh

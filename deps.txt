@@ -1,0 +1,17 @@
+fzf
+fzf-tab-git
+github-cli
+xorg
+xorg-xinit
+unclutter
+i3-wm
+i3lock-color
+network-manager-applet
+gxkb-ru-by-flags
+volctl
+maim
+xclip
+dmenu
+neovim
+wezterm
+brave-bin

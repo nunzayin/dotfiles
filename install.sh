@@ -3,6 +3,8 @@
 # Workspace installation script
 # You better invoke this script via make install
 
+WORKDIR=$(pwd)
+
 echo "Performing workspace installation..."
 
 if ! [[ -n $(command -v yay) ]]; then
@@ -26,4 +28,10 @@ if ! [[ -e ~/util ]]; then
 fi
 
 yay -S --needed zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if ! [[ -e ~/.oh-my-zsh ]]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+cat $WORKDIR/deps.txt | yay -S --needed -
+
+echo "Workspace installation procedure complete."
