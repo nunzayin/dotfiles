@@ -41,6 +41,8 @@ vim.keymap.set("n", "fzl", ":Lines<Enter>")
 vim.keymap.set("n", "fzh", ":History<Enter>")
 vim.keymap.set("n", "fzc", ":Commands<Enter>")
 
+vim.keymap.set("n", "fb", ":bp<Enter>")
+
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 
