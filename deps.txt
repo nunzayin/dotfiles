@@ -13,7 +13,7 @@ volctl
 maim
 xcolor
 xclip
-dmenu
+dmenu-fuzzymatch
 neovim
 wezterm
 brave-bin
