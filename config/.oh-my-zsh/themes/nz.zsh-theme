@@ -3,7 +3,7 @@ CL_B_WHITE="%{$fg_bold[white]%}"
 CL_B_RED="%{$fg_bold[red]%}"
 CL_CLR="%{$reset_color%}"
 
-PROMPT="$CL_B_CYAN┌[$CL_B_WHITE%c$CL_B_CYAN]"
+PROMPT="$CL_B_CYAN┌[$CL_B_WHITE%d$CL_B_CYAN]"
 PROMPT+='$(git_prompt_info)'
 PROMPT+="
 └>$CL_CLR "
