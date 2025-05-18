@@ -13,6 +13,7 @@ volctl
 maim
 xcolor
 xclip
+clipcat
 dmenu-fuzzymatch
 neovim
 wezterm

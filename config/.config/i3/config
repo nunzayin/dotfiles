@@ -22,6 +22,7 @@ font pango:monospace 8
 exec --no-startup-id nm-applet
 exec --no-startup-id gxkb
 exec --no-startup-id volctl
+exec --no-startup-id clipcatd
 
 tiling_drag modifier titlebar
 hide_edge_borders smart
@@ -37,6 +38,7 @@ bindsym $mod+l exec i3lock $i3lockconf
 bindsym $mod+o exec ~/util/togglesound.sh
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png -i
 bindsym $mod+p exec xcolor -s
+bindsym $mod+a exec clipcat-menu
 
 bindsym $mod+c kill
 bindsym $mod+w exec --no-startup-id dmenu_run
