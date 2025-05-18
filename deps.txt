@@ -11,6 +11,7 @@ network-manager-applet
 gxkb-ru-by-flags
 volctl
 maim
+xcolor
 xclip
 dmenu
 neovim
