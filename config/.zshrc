@@ -6,6 +6,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
+source <(fzf --zsh)
 
 alias ls='ls -lAh --color=auto'
 alias q="exit 0"
