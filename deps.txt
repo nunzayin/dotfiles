@@ -4,6 +4,7 @@ github-cli
 xorg
 xorg-xinit
 unclutter
+dunst
 i3-wm
 i3lock-color
 network-manager-applet
