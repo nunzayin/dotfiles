@@ -31,7 +31,7 @@ fi
 
 yay -S --needed zsh
 if ! [[ -e $HOME/.oh-my-zsh ]]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
 cat $WORKDIR/deps.txt | yay -S --needed -
