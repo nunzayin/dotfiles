@@ -9,6 +9,10 @@ i3-wm
 i3lock-color
 network-manager-applet
 gxkb-ru-by-flags
+pipewire
+pipewire-pulse
+pipewire-jack
+pipewire-alsa
 volctl
 maim
 xcolor
@@ -16,6 +20,6 @@ xclip
 clipcat
 dmenu-fuzzymatch
 neovim
-wezterm
+alacritty
 brave-bin
 lazygit
