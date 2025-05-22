@@ -14,7 +14,7 @@ Only missing packages will be installed.
 ### Usage
 
 ```bash
-$ /path/to/install.sh
+$ /path/to/dotfiles/install.sh
 ```
 
 No arguments accepted. You will be prompted to confirm installation.
@@ -27,7 +27,7 @@ It performs copying all the dotfiles from the repo to the homedir fully preservi
 ### Usage
 
 ```bash
-$ /path/to/sync.sh
+$ /path/to/dotfiles/sync.sh
 ```
 
 No arguments accepted. You will not be prompted for anything.
