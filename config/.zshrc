@@ -10,5 +10,7 @@ source <(fzf --zsh)
 
 alias ls='ls -lAh --color=auto'
 alias q="exit 0"
+alias cs="$HOME/dotfiles/sync.sh"
+alias sm="$HOME/util/sysmaint.sh"
 
 export VISUAL='nvim'
