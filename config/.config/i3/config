@@ -35,7 +35,7 @@ workspace_layout tabbed
 bindsym $mod+q exec i3-sensible-terminal
 bindsym $mod+b exec brave
 bindsym $mod+l exec i3lock $i3lockconf
-bindsym $mod+o exec ~/util/togglesound.sh
+bindsym $mod+o exec ~/utils/togglesound/togglesound.sh
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png -i
 bindsym $mod+p exec xcolor -s
 bindsym $mod+a exec clipcat-menu

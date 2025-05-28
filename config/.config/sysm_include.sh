@@ -2,8 +2,8 @@
 . $MODULES/update.sh
 
 REPOS=(
-    "$HOME/dotfiles"
-    "$HOME/util"
+    "$HOME/utils/sysmaint"
+    "$HOME/utils/togglesound"
 )
 . $MODULES/git_fetch.sh
 
