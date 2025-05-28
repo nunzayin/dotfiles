@@ -1,6 +1,5 @@
 . $MODULES/mirrors.sh
 . $MODULES/update.sh
-. $MODULES/omz_update.sh
 
 REPOS=(
     "$HOME/dotfiles"

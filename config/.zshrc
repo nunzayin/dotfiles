@@ -1,6 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="nz"
+zstyle ':omz:update' mode auto
 
 plugins=(git)
 
