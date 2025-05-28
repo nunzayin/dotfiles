@@ -5,6 +5,10 @@
 WORKDIR=$(dirname "$0")
 PWD=$(pwd)
 
+function yay_auto() {
+    echo "y" | LANG=C yay --answerdiff None --answerclean None --mflags "--noconfirm" "$@"
+}
+
 echo "Performing workspace installation..."
 
 if ! [[ -n $(command -v yay) ]]; then
@@ -19,22 +23,26 @@ if ! [[ -n $(command -v yay) ]]; then
         exit 1
     fi
     cd ..
-    yay -Syu
-    yay -S --needed trash-cli
+    yay_auto -Syu
+    yay_auto -S --needed trash-cli
     trash ./yay
 fi
 
-if ! [[ -e $HOME/util ]]; then
-    cd $HOME
-    git clone https://github.com/nunzayin/util
+if ! [[ -e "$HOME/utils/sysmaint" ]]; then
+    cd $HOME/utils
+    git clone https://github.com/nunzayin/sysmaint
+fi
+if ! [[ -e "$HOME/utils/togglesound" ]]; then
+    cd $HOME/utils
+    git clone https://github.com/nunzayin/togglesound
 fi
 
-yay -S --needed zsh
+yay_auto -S --needed zsh
 if ! [[ -n $(zsh -ic "command -v omz") ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
-cat $WORKDIR/deps.txt | yay -S --needed -
+yay_auto -S --needed $(cat $WORKDIR/deps.txt)
 
 echo "Workspace installation procedure complete."
 
