@@ -7,6 +7,7 @@ unclutter
 dunst
 i3-wm
 i3lock-color
+i3status
 network-manager-applet
 gxkb-ru-by-flags
 pipewire
