@@ -31,12 +31,12 @@ if ! [[ -n $(command -v yay) ]]; then
     trash ./yay
 fi
 
+mkdir $HOME/utils
+cd $HOME/utils
 if ! [[ -e "$HOME/utils/sysmaint" ]]; then
-    cd $HOME/utils
     git clone https://github.com/nunzayin/sysmaint
 fi
 if ! [[ -e "$HOME/utils/togglesound" ]]; then
-    cd $HOME/utils
     git clone https://github.com/nunzayin/togglesound
 fi
 
