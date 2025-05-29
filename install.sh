@@ -5,8 +5,11 @@
 WORKDIR=$(dirname "$0")
 PWD=$(pwd)
 
+function yay_semi_auto() {
+    LANG=C yay --answerdiff None --answerclean None --mflags "--noconfirm" "$@"
+}
 function yay_auto() {
-    echo "y" | LANG=C yay --answerdiff None --answerclean None --mflags "--noconfirm" "$@"
+    echo "y" | yay_semi_auto "$@"
 }
 
 echo "Performing workspace installation..."
@@ -42,7 +45,7 @@ if ! [[ -n $(zsh -ic "command -v omz") ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
-yay_auto -S --needed $(cat $WORKDIR/deps.txt)
+yay_semi_auto -S --needed $(cat $WORKDIR/deps.txt)
 
 echo "Workspace installation procedure complete."
 
