@@ -5,7 +5,7 @@ REPOS=(
     "$HOME/utils/sysmaint"
     "$HOME/utils/togglesound"
 )
-. $MODULES/git_fetch.sh
+. $MODULES/git_pull.sh
 
 . $MODULES/orphans.sh
 . $MODULES/pacman_cache.sh
