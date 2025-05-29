@@ -2,7 +2,7 @@
 
 # Workspace installation script
 
-WORKDIR=$(dirname "$0")
+WORKDIR="$(dirname "$(readlink -f "$0")")"
 PWD=$(pwd)
 
 function yay_semi_auto() {
