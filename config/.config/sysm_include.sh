@@ -7,6 +7,9 @@ REPOS=(
 )
 . $MODULES/git_pull.sh
 
+stage "SYNCING CONFIG FILES"
+$HOME/dotfiles/sync.sh
+
 . $MODULES/orphans.sh
 . $MODULES/pacman_cache.sh
 . $MODULES/syslogs.sh
