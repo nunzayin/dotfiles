@@ -6,10 +6,10 @@ WORKDIR="$(dirname "$(realpath "$0")")"
 PWD=$(pwd)
 
 function yay_semi_auto() {
-    LANG=C yay --answerdiff None --answerclean None --mflags "--noconfirm" "$@"
+    yay --answerdiff None --answerclean None --mflags "--noconfirm" "$@"
 }
 function yay_auto() {
-    echo "y" | yay_semi_auto "$@"
+    echo "y" | LANG=C yay_semi_auto "$@"
 }
 
 echo "Performing workspace installation..."
@@ -46,6 +46,11 @@ if ! [[ -n $(zsh -ic "command -v omz") ]]; then
 fi
 
 yay_semi_auto -S --needed $(cat $WORKDIR/deps.txt)
+
+systemctl --user enable --now pipewire.socket
+systemctl --user enable --now pipewire-pulse.socket
+systemctl --user enable --now wireplumber.service
+echo "Audio will work properly only after reboot"
 
 echo "Workspace installation procedure complete."
 
