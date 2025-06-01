@@ -13,5 +13,6 @@ alias ls='ls -lAh --color=auto'
 alias q="exit 0"
 alias cs="$HOME/dotfiles/sync.sh"
 alias sm="$HOME/utils/sysmaint/sysmaint.sh"
+alias yay='yay --answerdiff None --answerclean None --mflags "--noconfirm"'
 
 export VISUAL='nvim'
