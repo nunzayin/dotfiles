@@ -4,6 +4,7 @@
 REPOS=(
     "$HOME/utils/sysmaint"
     "$HOME/utils/togglesound"
+    "$HOME/dotfiles"
 )
 . $MODULES/git_pull.sh
 
