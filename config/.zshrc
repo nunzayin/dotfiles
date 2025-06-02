@@ -13,5 +13,6 @@ alias ls='ls -lAh --color=auto'
 alias q="exit 0"
 alias sm="$HOME/utils/sysmaint/sysmaint.sh"
 alias yay='yay --answerdiff None --answerclean None --mflags "--noconfirm"'
+alias tree="tree -aR -I '*\.git*'"
 
 export VISUAL='nvim'

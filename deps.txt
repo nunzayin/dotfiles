@@ -1,4 +1,5 @@
 stow
+tree
 fzf
 fzf-tab-git
 github-cli
