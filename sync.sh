@@ -2,8 +2,10 @@
 
 # Dotfiles synchronization script
 
+CURRENT_DIR="$(pwd)"
 WORKDIR="$(dirname "$(realpath "$0")")"
 
-for f in $(ls -1A "$WORKDIR/config"); do
-    cp -rv "$WORKDIR/config/$f" "$HOME"
-done
+stow -Rv --adopt --dir $WORKDIR/config --target $HOME .
+cd $WORKDIR
+git restore .
+cd $CURRENT_DIR

@@ -22,9 +22,12 @@ No arguments accepted. You will be prompted to confirm installation.
 ## `sync.sh`
 
 This is a config files synchronization script.
-It performs copying all the dotfiles from the repo to the homedir fully preserving file hierarchy.
+It utilizes GNU Stow to symlink config files to the ones in repo.
 
 ### Usage
+
+> [!WARNING]
+> This script will overwrite existing config files.
 
 ```bash
 $ /path/to/dotfiles/sync.sh
