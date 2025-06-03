@@ -27,3 +27,5 @@ neovim
 alacritty
 brave-bin
 lazygit
+go
+gopls
