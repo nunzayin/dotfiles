@@ -35,13 +35,14 @@ vim.keymap.set("n", "<A-k>", ":tabnext<CR>")
 vim.keymap.set("n", "<A-Left>", ":tabprevious<CR>")
 vim.keymap.set("n", "<A-Right>", ":tabnext<CR>")
 
-vim.keymap.set("n", "fzf", ":Files<Enter>")
+vim.keymap.set("n", "fzf", ":cd<Enter>:Files<Enter>")
 vim.keymap.set("n", "fzb", ":Buffers<Enter>")
 vim.keymap.set("n", "fzl", ":Lines<Enter>")
-vim.keymap.set("n", "fzh", ":History<Enter>")
-vim.keymap.set("n", "fzc", ":Commands<Enter>")
-
-vim.keymap.set("n", "fb", ":bp<Enter>")
+vim.keymap.set("n", "fzc", ":Files<Enter>")
+vim.keymap.set("n", "cd",
+    ":call fzf#run(fzf#wrap({'source': 'fd --no-ignore-vcs -Ht d', 'sink': 'cd'}))<Enter>")
+vim.keymap.set("n", "cs", ":cd %:h<Enter>")
+vim.keymap.set("n", "T", ":te<Enter>a")
 
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
