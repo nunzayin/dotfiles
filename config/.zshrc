@@ -14,5 +14,6 @@ alias q="exit 0"
 alias sm="$HOME/utils/sysmaint/sysmaint.sh"
 alias yay='yay --answerdiff None --answerclean None --mflags "--noconfirm"'
 alias tree="tree -aR -I '*\.git*'"
+alias ci='cd; cd $(fd --no-ignore-vcs -Ht d | fzf)'
 
 export VISUAL='nvim'
