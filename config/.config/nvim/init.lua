@@ -40,7 +40,7 @@ vim.keymap.set("n", "fzb", ":Buffers<Enter>")
 vim.keymap.set("n", "fzl", ":Lines<Enter>")
 vim.keymap.set("n", "fzc", ":Files<Enter>")
 vim.keymap.set("n", "cd",
-    ":call fzf#run(fzf#wrap({'source': 'fd --no-ignore-vcs -Ht d', 'sink': 'cd'}))<Enter>")
+":cd<Enter>:call fzf#run(fzf#wrap({'source': 'fd --no-ignore-vcs -Ht d', 'sink': 'cd'}))<Enter>")
 vim.keymap.set("n", "cs", ":cd %:h<Enter>")
 vim.keymap.set("n", "T", ":te<Enter>a")
 
@@ -53,6 +53,8 @@ Plug('neovim/nvim-lspconfig')
 Plug('junegunn/fzf')
 Plug('junegunn/fzf.vim')
 Plug('mrcjkb/rustaceanvim')
+Plug('ms-jpq/coq_nvim', { branch = 'coq'} )
+Plug('ms-jpq/coq.artifacts', { branch = 'artifacts'} )
 
 vim.call('plug#end')
 
@@ -72,4 +74,8 @@ lspconfig.gopls.setup {
             staticcheck = true
         }
     }
+}
+vim.g.coq_settings = {
+    auto_start = 'shut-up',
+    ["display.pum.source_context"] = {"[", "]"},
 }
