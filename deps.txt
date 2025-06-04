@@ -29,3 +29,5 @@ brave-bin
 lazygit
 go
 gopls
+rust
+rust-analyzer

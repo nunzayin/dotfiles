@@ -51,6 +51,7 @@ Plug('windwp/nvim-autopairs')
 Plug('neovim/nvim-lspconfig')
 Plug('junegunn/fzf')
 Plug('junegunn/fzf.vim')
+Plug('mrcjkb/rustaceanvim')
 
 vim.call('plug#end')
 
