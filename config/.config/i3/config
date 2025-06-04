@@ -15,7 +15,10 @@ set $i3lockconf \
     --date-color=ffffffff \
     --verif-color=00000000 \
     --modif-color=00000000 \
-    --wrong-color=00000000 \
+    --wrong-color=00000000
+
+set $screenshot \
+    maim -s | xclip -selection clipboard -t image/png -i
 
 font pango:monospace 8
 
@@ -36,7 +39,8 @@ bindsym $mod+q exec i3-sensible-terminal
 bindsym $mod+b exec brave
 bindsym $mod+l exec i3lock $i3lockconf
 bindsym $mod+o exec ~/utils/togglesound/togglesound.sh
-bindsym Print exec maim -s | xclip -selection clipboard -t image/png -i
+bindsym Print exec $screenshot
+bindsym $mod+F2 exec $screenshot
 bindsym $mod+p exec xcolor -s
 bindsym $mod+a exec clipcat-menu
 
