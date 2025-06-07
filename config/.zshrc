@@ -17,3 +17,4 @@ alias tree="tree -aR -I '*\.git*'"
 alias ci='cd; cd $(fd --no-ignore-vcs -Ht d | fzf)'
 
 export VISUAL='nvim'
+export FZF_DEFAULT_COMMAND='fd --no-ignore-vcs -H'
