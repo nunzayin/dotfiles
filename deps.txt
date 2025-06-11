@@ -29,7 +29,5 @@ alacritty
 otf-codenewroman-nerd
 brave-bin
 lazygit
-go
-gopls
-rust
-rust-analyzer
+zig
+zls

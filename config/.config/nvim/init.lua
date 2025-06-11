@@ -52,29 +52,34 @@ Plug('windwp/nvim-autopairs')
 Plug('neovim/nvim-lspconfig')
 Plug('junegunn/fzf')
 Plug('junegunn/fzf.vim')
-Plug('mrcjkb/rustaceanvim')
 Plug('ms-jpq/coq_nvim', { branch = 'coq'} )
 Plug('ms-jpq/coq.artifacts', { branch = 'artifacts'} )
+Plug('ziglang/zig.vim')
 
 vim.call('plug#end')
 
 require("nvim-autopairs").setup {}
+
 vim.diagnostic.config({ virtual_text = true })
+
 local lspconfig = require("lspconfig")
-lspconfig.gopls.setup {
-    on_attach = on_attach,
-    cmd = { "gopls", "serve" },
-    filetypes = { "go", "go.mod" },
+
+vim.g.zig_fmt_parse_errors = 0
+vim.g.zig_fmt_autosave = 0
+vim.api.nvim_create_autocmd('BufWritePre',{
+    pattern = {"*.zig", "*.zon"},
+    callback = function(ev)
+        vim.lsp.buf.format()
+    end
+})
+lspconfig.zls.setup {
     settings = {
-        gopls = {
-            analyses = {
-                unusedparams = true,
-                shadow = true
-            },
-            staticcheck = true
+        zls = {
+            semantic_tokens = "partial"
         }
     }
 }
+
 vim.g.coq_settings = {
     auto_start = 'shut-up',
     ["display.pum.source_context"] = {"[", "]"},
