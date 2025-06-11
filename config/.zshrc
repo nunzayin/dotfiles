@@ -3,7 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="nz"
 zstyle ':omz:update' mode auto
 
-plugins=(git z)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
