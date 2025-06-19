@@ -19,3 +19,4 @@ alias zb="zig build --summary all"
 
 export VISUAL='nvim'
 export FZF_DEFAULT_COMMAND='fd --no-ignore-vcs -H'
+export PATH="/home/nz/.local/bin:$PATH"
