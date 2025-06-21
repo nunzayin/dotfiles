@@ -56,6 +56,7 @@ Plug('junegunn/fzf.vim')
 Plug('ms-jpq/coq_nvim', { branch = 'coq'} )
 Plug('ms-jpq/coq.artifacts', { branch = 'artifacts'} )
 Plug('ziglang/zig.vim')
+Plug('blazkowolf/gruber-darker.nvim')
 
 vim.call('plug#end')
 
@@ -90,3 +91,5 @@ vim.api.nvim_set_keymap(
     'i', '<Up>', [[pumvisible() ? "<C-e><Up>" : "<Up>"]], { expr = true, noremap = true })
 vim.api.nvim_set_keymap(
     'i', '<Down>', [[pumvisible() ? "<C-e><Down>" : "<Down>"]], { expr = true, noremap = true })
+
+vim.cmd.colorscheme("gruber-darker")
