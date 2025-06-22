@@ -43,6 +43,7 @@ vim.keymap.set("n", "cd",
 ":cd<Enter>:call fzf#run(fzf#wrap({'source': 'fd --no-ignore-vcs -Ht d', 'sink': 'cd'}))<Enter>")
 vim.keymap.set("n", "cs", ":cd %:h<Enter>")
 vim.keymap.set("n", "T", ":te<Enter>a")
+vim.keymap.set("n", "L", ":te lazygit<Enter>a")
 vim.keymap.set("n", "q", ":bd<Enter>")
 
 local Plug = vim.fn['plug#']
@@ -92,4 +93,9 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
     'i', '<Down>', [[pumvisible() ? "<C-e><Down>" : "<Down>"]], { expr = true, noremap = true })
 
+require("gruber-darker").setup {
+    italic = {
+        strings = false,
+    },
+}
 vim.cmd.colorscheme("gruber-darker")
