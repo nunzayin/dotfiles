@@ -43,7 +43,15 @@ vim.keymap.set("n", "cd",
 ":cd<Enter>:call fzf#run(fzf#wrap({'source': 'fd --no-ignore-vcs -Ht d', 'sink': 'cd'}))<Enter>")
 vim.keymap.set("n", "cs", ":cd %:h<Enter>")
 vim.keymap.set("n", "T", ":te<Enter>a")
+
 vim.keymap.set("n", "L", ":te lazygit<Enter>a")
+vim.api.nvim_create_autocmd('TermClose',{
+    pattern = { "term://*lazygit" },
+    callback = function(ev)
+        vim.api.nvim_input("<Enter>")
+    end
+})
+
 vim.keymap.set("n", "q", ":bd<Enter>")
 
 local Plug = vim.fn['plug#']
