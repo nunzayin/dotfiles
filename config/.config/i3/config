@@ -1,5 +1,6 @@
 set $mod Mod4
 floating_modifier $mod
+
 set $exiti3 \
     "i3-nagbar -t warning -m \
     'Exit i3?' \
@@ -20,7 +21,10 @@ set $i3lockconf \
 set $screenshot \
     maim -s | xclip -selection clipboard -t image/png -i
 
-font pango:monospace 8
+set $font \
+    pango:CodeNewRoman Nerd Font 11
+
+font $font
 
 exec --no-startup-id nm-applet
 exec --no-startup-id gxkb
@@ -117,6 +121,6 @@ bindsym $mod+r mode "resize"
 
 bar {
         status_command i3status --config ~/.config/.i3status.conf
-        font pango:monospace 11
+        font $font
         separator_symbol "|"
 }

@@ -6,6 +6,8 @@ fd
 github-cli
 xorg
 xorg-xinit
+otf-codenewroman-nerd
+gnu-free-fonts
 unclutter
 dunst
 i3-wm
