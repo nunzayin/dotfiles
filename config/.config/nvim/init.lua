@@ -28,7 +28,6 @@ vim.opt.expandtab = true
 vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
-vim.cmd([[highlight Constant ctermbg=10 guifg=#98e3de]])
 
 vim.keymap.set("n", "<A-j>", ":tabprevious<CR>")
 vim.keymap.set("n", "<A-k>", ":tabnext<CR>")
@@ -88,6 +87,14 @@ lspconfig.zls.setup {
         zls = {
             semantic_tokens = "partial"
         }
+    }
+}
+
+lspconfig.tinymist.setup {
+    settings = {
+        formatterMode = "typstyle",
+        exportPdf = "onSave",
+        semanticTokens = "enable"
     }
 }
 

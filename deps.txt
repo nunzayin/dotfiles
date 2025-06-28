@@ -33,3 +33,5 @@ brave-bin
 lazygit
 zig
 zls
+typst
+tinymist
