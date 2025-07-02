@@ -30,6 +30,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id gxkb
 exec --no-startup-id volctl
 exec --no-startup-id clipcatd
+exec --no-startup-id xss-lock -l -- i3lock $i3lockconf
+exec --no-startup-id udiskie -sF
 
 tiling_drag modifier titlebar
 hide_edge_borders smart
@@ -122,5 +124,5 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status --config ~/.config/.i3status.conf
         font $font
-        separator_symbol "|"
+        separator_symbol " | "
 }
