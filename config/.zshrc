@@ -18,6 +18,7 @@ alias ci='cd; cd $(fd --no-ignore-vcs -Ht d | fzf)'
 alias zb="zig build --summary all"
 alias trash="trash -v"
 alias rm="rm -v"
+alias tdu='du -sh $HOME/.local/share/Trash'
 
 export VISUAL='nvim'
 export FZF_DEFAULT_COMMAND='fd --no-ignore-vcs -H'
