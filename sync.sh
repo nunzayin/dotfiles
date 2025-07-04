@@ -5,7 +5,7 @@
 CURRENT_DIR="$(pwd)"
 WORKDIR="$(dirname "$(realpath "$0")")"
 
-stow -R --adopt --dir $WORKDIR/config --target $HOME .
+stow -Rv --adopt --dir $WORKDIR/config --target $HOME .
 cd $WORKDIR
 git restore .
 cd $CURRENT_DIR
