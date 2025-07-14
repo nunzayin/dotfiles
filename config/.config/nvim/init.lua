@@ -93,7 +93,7 @@ lspconfig.zls.setup {
 lspconfig.tinymist.setup {
     settings = {
         formatterMode = "typstyle",
-        exportPdf = "onSave",
+        exportPdf = "never",
         semanticTokens = "enable"
     }
 }
