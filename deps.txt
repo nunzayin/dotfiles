@@ -36,3 +36,6 @@ zig
 zls
 typst
 tinymist
+pwvucontrol
+xss-lock
+udiskie
