@@ -1,4 +1,5 @@
 informant
+rate-mirrors-bin
 stow
 tree
 fzf
