@@ -47,10 +47,12 @@ fi
 
 yay_semi_auto -S --needed $(cat $WORKDIR/deps.txt)
 
-mkdir -p $XDG_CONFIG_HOME/clipcat
-clipcatd default-config > $XDG_CONFIG_HOME/clipcat/clipcatd.toml
-clipcatctl default-config > $XDG_CONFIG_HOME/clipcat/clipcatctl.toml
-clipcat-menu default-config > $XDG_CONFIG_HOME/clipcat/clipcat-menu.toml
+CONFIG_HOME="$HOME/.config"
+mkdir -p $CONFIG_HOME/clipcat
+clipcatd default-config > $CONFIG_HOME/clipcat/clipcatd.toml
+clipcatctl default-config > $CONFIG_HOME/clipcat/clipcatctl.toml
+clipcat-menu default-config > $CONFIG_HOME/clipcat/clipcat-menu.toml
+sed -i -e 's/finder = "rofi"/finder = "dmenu"/' $CONFIG_HOME/clipcat/clipcat-menu.toml
 
 systemctl --user enable --now pipewire.socket
 systemctl --user enable --now pipewire-pulse.socket
