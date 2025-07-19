@@ -1,4 +1,3 @@
-informant
 rate-mirrors-bin
 pacman-contrib
 stow
