@@ -26,7 +26,7 @@ alias cal='cal -3mc 1'
 
 export VISUAL='nvim'
 export FZF_DEFAULT_COMMAND='fd --no-ignore-vcs -H'
-export PATH="/home/nz/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 if ! (( $chpwd_functions[(I)autols] )); then
   chpwd_functions+=(autols)
