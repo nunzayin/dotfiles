@@ -15,6 +15,7 @@ alias sm="$HOME/utils/sysmaint/sysmaint.sh"
 alias yay='yay --answerdiff None --answerclean None --mflags "--noconfirm"'
 alias tree="tree -aR -I '*\.git*'"
 alias ci='cd; cd "$(fd --no-ignore-vcs -Ht d | fzf)"'
+alias cc='cd "$(fd --no-ignore-vcs -Ht d | fzf)"'
 alias cs='cd; cd "$(fd -IHt d | fzf)"'
 alias cr='cd /; cd "$(fd -IHt d | fzf)"'
 alias zb="zig build --summary all"
