@@ -33,8 +33,6 @@ alacritty
 otf-codenewroman-nerd
 brave-bin
 lazygit
-zig
-zls
 typst
 tinymist
 pwvucontrol

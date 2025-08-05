@@ -29,11 +29,6 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
-vim.keymap.set("n", "<A-j>", ":tabprevious<CR>")
-vim.keymap.set("n", "<A-k>", ":tabnext<CR>")
-vim.keymap.set("n", "<A-Left>", ":tabprevious<CR>")
-vim.keymap.set("n", "<A-Right>", ":tabnext<CR>")
-
 vim.keymap.set("n", "fzf", ":cd<Enter>:Files<Enter>")
 vim.keymap.set("n", "fzb", ":Buffers<Enter>")
 vim.keymap.set("n", "fzl", ":Lines<Enter>")
@@ -63,9 +58,7 @@ Plug('junegunn/fzf')
 Plug('junegunn/fzf.vim')
 Plug('ms-jpq/coq_nvim', { branch = 'coq'} )
 Plug('ms-jpq/coq.artifacts', { branch = 'artifacts'} )
-Plug('ziglang/zig.vim')
 Plug('blazkowolf/gruber-darker.nvim')
-Plug('mechatroner/rainbow_csv')
 
 vim.call('plug#end')
 
@@ -74,22 +67,6 @@ require("nvim-autopairs").setup {}
 vim.diagnostic.config({ virtual_text = true })
 
 local lspconfig = require("lspconfig")
-
-vim.g.zig_fmt_parse_errors = 0
-vim.g.zig_fmt_autosave = 0
-vim.api.nvim_create_autocmd('BufWritePre',{
-    pattern = {"*.zig", "*.zon"},
-    callback = function(ev)
-        vim.lsp.buf.format()
-    end
-})
-lspconfig.zls.setup {
-    settings = {
-        zls = {
-            semantic_tokens = "partial"
-        }
-    }
-}
 
 lspconfig.tinymist.setup {
     settings = {
