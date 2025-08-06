@@ -6,8 +6,9 @@ vim.opt.relativenumber = false
 vim.schedule(function() 
     vim.opt.clipboard = 'unnamedplus'
 end)
-vim.opt.breakindent = true
+vim.opt.wrap = false
 vim.opt.undofile = true
+vim.opt.swapfile = false
 vim.opt.autoread = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -53,7 +54,6 @@ vim.call('plug#begin')
 
 Plug('folke/which-key.nvim')
 Plug('windwp/nvim-autopairs')
-Plug('neovim/nvim-lspconfig')
 Plug('junegunn/fzf')
 Plug('junegunn/fzf.vim')
 Plug('ms-jpq/coq_nvim', { branch = 'coq'} )
@@ -63,18 +63,6 @@ Plug('blazkowolf/gruber-darker.nvim')
 vim.call('plug#end')
 
 require("nvim-autopairs").setup {}
-
-vim.diagnostic.config({ virtual_text = true })
-
-local lspconfig = require("lspconfig")
-
-lspconfig.tinymist.setup {
-    settings = {
-        formatterMode = "typstyle",
-        exportPdf = "never",
-        semanticTokens = "enable"
-    }
-}
 
 vim.g.coq_settings = {
     auto_start = 'shut-up',
