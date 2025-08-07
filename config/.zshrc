@@ -22,7 +22,6 @@ alias zb="zig build --summary all"
 alias trash="trash -v"
 alias rm="rm -v"
 alias tdu='du -sh $HOME/.local/share/Trash'
-alias fk='setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:lalt_lshift_toggle'
 alias cal='cal -3mc 1'
 
 export VISUAL='nvim'

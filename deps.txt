@@ -36,3 +36,4 @@ typst
 pwvucontrol
 xss-lock
 udiskie
+thunar
