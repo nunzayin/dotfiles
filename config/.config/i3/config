@@ -21,6 +21,13 @@ set $i3lockconf \
 set $screenshot \
     maim -s | xclip -selection clipboard -t image/png -i
 
+set $fixkeyboard \
+    "setxkbmap \
+    -model pc105 \
+    -layout 'us,ru' \
+    -variant qwerty \
+    -option 'grp:lalt_lshift_toggle'"
+
 set $font \
     pango:CodeNewRoman Nerd Font 11
 
@@ -53,7 +60,7 @@ bindsym $mod+e exec thunar
 
 bindsym $mod+c kill
 bindsym $mod+w exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+s exec --no-startup-id setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:lalt_lshift_toggle
+bindsym $mod+s exec $fixkeyboard
 
 bindsym $mod+j focus left
 bindsym $mod+k focus right
