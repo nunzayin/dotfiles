@@ -56,23 +56,11 @@ Plug('folke/which-key.nvim')
 Plug('windwp/nvim-autopairs')
 Plug('junegunn/fzf')
 Plug('junegunn/fzf.vim')
-Plug('ms-jpq/coq_nvim', { branch = 'coq'} )
-Plug('ms-jpq/coq.artifacts', { branch = 'artifacts'} )
 Plug('blazkowolf/gruber-darker.nvim')
 
 vim.call('plug#end')
 
 require("nvim-autopairs").setup {}
-
-vim.g.coq_settings = {
-    auto_start = 'shut-up',
-    ["display.pum.source_context"] = {"[", "]"},
-    ["keymap.recommended"] = false,
-}
-vim.api.nvim_set_keymap(
-    'i', '<Up>', [[pumvisible() ? "<C-e><Up>" : "<Up>"]], { expr = true, noremap = true })
-vim.api.nvim_set_keymap(
-    'i', '<Down>', [[pumvisible() ? "<C-e><Down>" : "<Down>"]], { expr = true, noremap = true })
 
 require("gruber-darker").setup {
     italic = {
