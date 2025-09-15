@@ -27,15 +27,3 @@ alias cal='cal -3mc 1'
 export VISUAL='nvim'
 export FZF_DEFAULT_COMMAND='fd --no-ignore-vcs -H'
 export PATH="$HOME/.local/bin:$PATH"
-
-if ! (( $chpwd_functions[(I)autols] )); then
-  chpwd_functions+=(autols)
-fi
-function autols() {
-  if [[ -o interactive ]]; then
-    emulate -L zsh
-    if ! [[ ("$PWD" = "$HOME") || ("$PWD" = "/") ]]; then
-        eval "ls -lAh --color=auto"
-    fi
-  fi
-}
