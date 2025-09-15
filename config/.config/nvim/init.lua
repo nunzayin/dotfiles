@@ -29,6 +29,7 @@ vim.opt.expandtab = true
 vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
+vim.opt.colorcolumn = '80'
 
 vim.keymap.set("n", "fzf", ":cd<Enter>:Files<Enter>")
 vim.keymap.set("n", "fzb", ":Buffers<Enter>")
