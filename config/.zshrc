@@ -21,7 +21,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="$CL_B_CYAN]"
 ZSH_THEME_GIT_PROMPT_DIRTY="$CL_B_RED!$CL_CLR"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-alias ls='ls -lAh --color=auto'
+alias ls='ls -lAh --color=always'
 alias q="exit 0"
 alias sm="$HOME/utils/sysmaint/sysmaint.sh"
 alias yay='yay --answerdiff None --answerclean None --mflags "--noconfirm" --color always'
@@ -30,10 +30,8 @@ alias ci='cd; cd "$(fd --no-ignore-vcs -Ht d | fzf)"'
 alias cc='cd "$(fd --no-ignore-vcs -Ht d | fzf)"'
 alias cs='cd; cd "$(fd -IHt d | fzf)"'
 alias cr='cd /; cd "$(fd -IHt d | fzf)"'
-alias zb="zig build --summary all"
 alias trash="trash -v"
 alias rm="rm -v"
-alias tdu='du -sh $HOME/.local/share/Trash'
 alias cal='cal -3mc 1'
 
 export VISUAL='nvim'
