@@ -40,7 +40,7 @@ vim.keymap.set("n", "cd",
 vim.keymap.set("n", "cs", ":cd %:h<Enter>")
 vim.keymap.set("n", "T", ":te<Enter>a")
 
-vim.keymap.set("n", "L", ":te lazygit<Enter>a")
+vim.keymap.set("n", "L", ":tabnew<Enter>:te lazygit<Enter>a")
 vim.api.nvim_create_autocmd('TermClose',{
     pattern = { "term://*lazygit" },
     callback = function(ev)
