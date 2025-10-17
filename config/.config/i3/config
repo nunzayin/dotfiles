@@ -51,11 +51,11 @@ workspace_layout tabbed
 bindsym $mod+q exec i3-sensible-terminal
 bindsym $mod+b exec brave
 bindsym $mod+l exec i3lock $i3lockconf
-bindsym $mod+o exec ~/utils/togglesound/togglesound.sh
-bindsym $mod+u exec pactl set-sink-mute $(pactl get-default-sink) toggle
-bindsym $mod+Shift+s exec $screenshot
-bindsym $mod+p exec xcolor -s
-bindsym $mod+a exec clipcat-menu
+bindsym $mod+o exec --no-startup-id ~/utils/togglesound/togglesound.sh
+bindsym $mod+u exec --no-startup-id pactl set-sink-mute $(pactl get-default-sink) toggle
+bindsym $mod+Shift+s exec --no-startup-id $screenshot
+bindsym $mod+p exec --no-startup-id xcolor -s
+bindsym $mod+a exec --no-startup-id clipcat-menu
 bindsym $mod+e exec thunar
 
 bindsym $mod+c kill
