@@ -1,6 +1,5 @@
 pacman-contrib
 stow
-tree
 fzf
 fd
 github-cli
