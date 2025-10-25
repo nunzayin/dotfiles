@@ -27,8 +27,7 @@ if ! [[ -n $(command -v yay) ]]; then
     fi
     cd ..
     yay_auto -Syu
-    yay_auto -S --needed trash-cli
-    trash ./yay
+    rm -vrf ./yay
 fi
 
 mkdir $HOME/utils
