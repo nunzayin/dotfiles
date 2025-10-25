@@ -40,11 +40,6 @@ if ! [[ -e "$HOME/utils/togglesound" ]]; then
     git clone https://github.com/nunzayin/togglesound
 fi
 
-yay_auto -S --needed zsh
-if ! [[ -n $(zsh -ic "command -v omz") ]]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-fi
-
 yay_semi_auto -S --needed $(cat $WORKDIR/deps.txt)
 
 CONFIG_HOME="$HOME/.config"

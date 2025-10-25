@@ -2,7 +2,6 @@ pacman-contrib
 stow
 tree
 fzf
-fzf-tab-git
 fd
 github-cli
 xorg

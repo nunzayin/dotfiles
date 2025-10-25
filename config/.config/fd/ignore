@@ -3,6 +3,5 @@
 \.cargo/
 \.config/BraveSoftware/
 \.config/libreoffice/
-\.oh-my-zsh/
 *\.git*
 PortProton
