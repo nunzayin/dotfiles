@@ -9,6 +9,9 @@ if [[ -f "$(command -v fzf)" ]]; then
     fi
 fi
 
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
 PS1='┌[\w]\n└> '
 
 alias ls='ls -lAh --color=always'
