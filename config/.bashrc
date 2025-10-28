@@ -1,6 +1,13 @@
 [[ $- != *i* ]] && return
 
-eval "$(fzf --bash)"
+if [[ -f "$(command -v fzf)" ]]; then
+    eval "$(fzf --bash)"
+    COMPLETION_SCRIPT=/usr/share/fzf-tab-completion/bash/fzf-bash-completion.sh
+    if [[ -f "$COMPLETION_SCRIPT" ]]; then
+        source $COMPLETION_SCRIPT
+        bind -x '"\t": fzf_bash_completion'
+    fi
+fi
 
 PS1='┌[\w]\n└> '
 

@@ -28,6 +28,8 @@ dmenu-fuzzymatch
 neovim
 alacritty
 brave-bin
+bash-completion
+fzf-tab-completion-git
 lazygit
 typst
 pwvucontrol
