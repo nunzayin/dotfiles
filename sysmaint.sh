@@ -162,38 +162,56 @@ function end_log() {
 }
 
 function normal_mode() {
+    local EXIT_CODE
+    ((EXIT_CODE=0))
     init_log
     for TASK in "${TASK_ORDER[@]}"; do
         exec_task "$TASK"
+        ((EXIT_CODE+=$?))
     done
     end_log
+    return $EXIT_CODE
 }
 
 function whitelist_mode() {
+    local EXIT_CODE
     init_log
     for TASK in "${TASK_ORDER[@]}"; do
-        [[ "${ARGS_TASKS[*]}" =~ "${TASK}" ]] && exec_task "$TASK"
+        if [[ "${ARGS_TASKS[*]}" =~ "${TASK}" ]]; then
+            exec_task "$TASK"
+            ((EXIT_CODE+=$?))
+        fi
     done
     end_log
+    return $EXIT_CODE
 }
 
 function blacklist_mode() {
+    local EXIT_CODE
     init_log
     for TASK in "${TASK_ORDER[@]}"; do
-        [[ ! "${ARGS_TASKS[*]}" =~ "${TASK}" ]] && exec_task "$TASK"
+        if [[ ! "${ARGS_TASKS[*]}" =~ "${TASK}" ]]; then
+            exec_task "$TASK"
+            ((EXIT_CODE+=$?))
+        fi
     done
     end_log
+    return $EXIT_CODE
 }
 
 function query_mode() {
     printf '%s\n' "${TASK_ORDER[@]}"
+    return 0
 }
 
 function main() {
+    local EXIT_CODE
     tput civis
     parse_args $@
     "${EXECUTION_MODE:?Invalid execution mode}_mode"
+    ((EXIT_CODE=$?))
     tput cnorm
+    exit $EXIT_CODE
 }
 
 main $@
