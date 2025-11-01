@@ -30,12 +30,7 @@ if ! [[ -n $(command -v yay) ]]; then
     rm -vrf ./yay
 fi
 
-mkdir $HOME/utils
-cd $HOME/utils
-if ! [[ -e "$HOME/utils/sysmaint" ]]; then
-    git clone https://github.com/nunzayin/sysmaint
-fi
-if ! [[ -e "$HOME/utils/togglesound" ]]; then
+if ! [[ -e "$HOME/togglesound" ]]; then
     git clone https://github.com/nunzayin/togglesound
 fi
 

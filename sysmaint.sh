@@ -16,7 +16,7 @@ TASK_ORDER=(
 )
 SM_LOG_FILE="$HOME/.sysm_log"
 GIT_PULL_REPOS=(
-    "$HOME/utils/togglesound"
+    "$HOME/togglesound"
     "$HOME/dotfiles"
 )
 LOADING_ANIMATION=( '|' '/' '-' "\\" )
