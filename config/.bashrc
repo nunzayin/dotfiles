@@ -16,7 +16,7 @@ PS1='┌[\w]\n└> '
 
 alias ls='ls -lAh --color=always'
 alias q="exit 0"
-alias sm="$HOME/utils/sysmaint/sysmaint.sh"
+alias sm="$HOME/dotfiles/sysmaint.sh"
 alias ci='cd; cd "$(fd --no-ignore-vcs -Ht d | fzf)"'
 alias cu='cd "$(fd --no-ignore-vcs -Ht d | fzf)"'
 alias cs='cd; cd "$(fd -IHt d | fzf)"'
