@@ -23,7 +23,7 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
-pwvucontrol
+pipemixer
 stow
 thunar
 typst
