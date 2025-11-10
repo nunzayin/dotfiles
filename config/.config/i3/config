@@ -1,6 +1,8 @@
 set $mod Mod4
 floating_modifier $mod
 
+set $run exec --no-startup-id
+
 set $exiti3 \
     "i3-nagbar -t warning -m \
     'Exit i3?' \
@@ -33,12 +35,12 @@ set $font \
 
 font $font
 
-exec --no-startup-id nm-applet
-exec --no-startup-id gxkb
-exec --no-startup-id volctl
-exec --no-startup-id clipcatd
-exec --no-startup-id xss-lock -l -- i3lock $i3lockconf
-exec --no-startup-id udiskie -sF
+$run nm-applet
+$run gxkb
+$run volctl
+$run clipcatd
+$run xss-lock -l -- i3lock $i3lockconf
+$run udiskie -sF
 
 tiling_drag modifier titlebar
 hide_edge_borders smart
@@ -48,19 +50,19 @@ for_window [class="^.*"] border pixel 2
 gaps left 4px
 workspace_layout tabbed
 
-bindsym $mod+q exec i3-sensible-terminal
-bindsym $mod+b exec brave
-bindsym $mod+l exec i3lock $i3lockconf
-bindsym $mod+o exec --no-startup-id ~/togglesound/togglesound.sh
-bindsym $mod+u exec --no-startup-id pactl set-sink-mute $(pactl get-default-sink) toggle
-bindsym $mod+Shift+s exec --no-startup-id $screenshot
-bindsym $mod+p exec --no-startup-id xcolor -s
-bindsym $mod+a exec --no-startup-id clipcat-menu
-bindsym $mod+e exec thunar
+bindsym $mod+q $run i3-sensible-terminal
+bindsym $mod+b $run brave
+bindsym $mod+l $run i3lock $i3lockconf
+bindsym $mod+o $run ~/togglesound/togglesound.sh
+bindsym $mod+u $run pactl set-sink-mute $(pactl get-default-sink) toggle
+bindsym $mod+Shift+s $run $screenshot
+bindsym $mod+p $run xcolor -s
+bindsym $mod+a $run clipcat-menu
+bindsym $mod+e $run thunar
 
 bindsym $mod+c kill
-bindsym $mod+w exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+s exec --no-startup-id $fixkeyboard
+bindsym $mod+w $run i3-dmenu-desktop
+bindsym $mod+s $run $fixkeyboard
 
 bindsym $mod+j focus left
 bindsym $mod+k focus right
@@ -117,7 +119,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+m exec $exiti3
+bindsym $mod+m $run $exiti3
 
 mode "resize" {
         bindsym Left resize shrink width 10 px or 10 ppt
