@@ -31,6 +31,7 @@ if ! [[ -n $(command -v yay) ]]; then
 fi
 
 if ! [[ -e "$HOME/togglesound" ]]; then
+    cd "$HOME"
     git clone https://github.com/nunzayin/togglesound
 fi
 
