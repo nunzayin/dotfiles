@@ -14,6 +14,13 @@ bind '"\e[B": history-search-forward'
 
 PS1='┌[\w]\n└> '
 
+[[ -f "${HOME}/.cwd" ]] && cd "$(< ${HOME}/.cwd)"
+function cd_memorize() {
+    cd $@
+    pwd > "${HOME}/.cwd"
+}
+alias cd=cd_memorize
+
 alias ls='ls -lAh --color=always'
 alias q="exit 0"
 alias sm="$HOME/dotfiles/sysmaint.sh"
