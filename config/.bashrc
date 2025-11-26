@@ -30,6 +30,7 @@ alias cs='cd; cd "$(fd -IHt d | fzf)"'
 alias cr='cd /; cd "$(fd -IHt d | fzf)"'
 alias rm="rm -v"
 alias cal='cal -3mc 1'
+alias reb='cmake .. && cmake --build . && ctest'
 
 export VISUAL='nvim'
 export FZF_DEFAULT_COMMAND='fd --no-ignore-vcs -H'
