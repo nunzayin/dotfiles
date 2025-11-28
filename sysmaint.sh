@@ -47,7 +47,7 @@ function task_git_pull() {
 }
 
 function task_mirrors() {
-    rankmirrors /etc/pacman.d/mirrorlist \
+    rankmirrors -v -p -w -m 3 /etc/pacman.d/mirrorlist \
         | sudo tee /etc/pacman.d/mirrorlist.new
     if [[ -n $(grep '^Server = .*$' /etc/pacman.d/mirrorlist.new) ]]; then
         sudo rename mirrorlist.new mirrorlist /etc/pacman.d/mirrorlist.new
