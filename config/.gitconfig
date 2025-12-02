@@ -1,11 +1,14 @@
 [http]
 	postBuffer = 157286400
 [user]
-	name = nz
-	email = <64735893+nunzayin@users.noreply.github.com>
+	name = nunzayin
+	email = <nunzayin@noreply.codeberg.org>
+	signingKey = /home/nz/.ssh/id_ed25519.pub
 [credential "https://github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[gpg]
+	format = ssh
+[commit]
+	gpgSign = true

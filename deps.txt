@@ -8,6 +8,7 @@ fd
 fzf
 fzf-tab-completion-git
 github-cli
+tea
 gnu-free-fonts
 gxkb-ru-by-flags
 i3-wm
@@ -36,3 +37,4 @@ xcolor
 xorg
 xorg-xinit
 xss-lock
+x11-ssh-askpass
